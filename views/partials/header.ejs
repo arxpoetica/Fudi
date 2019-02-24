@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Füdi - Connecting Restaurants and Influencers</title>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="menulogo"><img src="images/Screen Shot 2019-02-16 at 3.06.21 AM.png" class="menulogo"></a>
+      <div class="search-container">
+        <form action="/search" method="post">
+          <input type="text" class="menusearchbar" placeholder=" Search..." name="search">
+          <button type="submit" class="menusearchbutton"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <a href="#news" class="menulink topitem">News</a>
+      <a href="#contact" class="menulink">Contact</a>
+      <a href="#about" class="menulink lastitem">About</a>
+      <a href="javascript:void(0);" class="icon menulink" onclick="navbarClick()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <script>
+    function navbarClick() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    </div>

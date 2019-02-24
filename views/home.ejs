@@ -1,0 +1,69 @@
+<%- include('partials/header') %>
+
+<div class="row">
+  <div class="col-lg-1 col-md-2 col-sm-3 maingrid">
+    <form class="" action="index.html" method="post">
+      <button type="button" name="filter" value="">Filter</button>
+    </form>
+  </div>
+  <div class="col-lg-1 col-md-2 col-sm-3 maingrid">
+      <button type="button" onclick="filterPopup()" name="filter" value="">Filter</button>
+      <span class="feedFilterPopup" id="followersPopup">
+        <form class="followersmaxmin" action="/filter" method="post">
+          min. followers
+          <input type="range" name="minfollowersslider" id="minfollowers" oninput="updateSliderInputMin(this.value);" min="0" max="100000">
+          <p id="minfollowerstext">0</p>
+          max. followers
+          <input type="range" name="maxfollowersslider" oninput="updateSliderInputMax(this.value);" value="" min="0" max="100000">
+          <p id="maxfollowerstext">0</p>
+          <input type="submit" name="submit" value="Apply">
+        </form>
+      </span>
+  </div>
+  <div class="col-lg-1 col-md-2 col-sm-3 maingrid">
+    <form class="" action="index.html" method="post">
+      <button type="button" name="filter" value="">Stars</button>
+    </form>
+  </div>
+</div>
+<!-- Profile Tiles -->
+<div class="row maingridrow">
+  <% profileInfo.forEach(function(profile){ %>
+    <div class="col-lg-3 col-md-4 col-sm-6 maingrid">
+      <div class="maingriditem">
+        <a href="/profile/<%= profile.igusername %>" > <img class="mainpicture" src= <%= profile.profile_picture %> ></a>
+        <a href="/profile/<%= profile.igusername %>" > <p class="maingridtext">@<%= profile.igusername %></p></a>
+        <p class="maingridtextdesc"><%= profile.bio.substring(0,75) + "..." %></p>
+        <div class="starscontainer">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p class="numberoffollowers"><i class='fas fa-child personicon'></i><%= profile.followers %></p>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+<script>
+// When the user clicks on filter button, open the popup
+function filterPopup() {
+  var popup = document.getElementById("followersPopup");
+  popup.classList.toggle("show");
+}
+
+function updateSliderInputMin(val) {
+  const minFollowersText = document.getElementById("minfollowerstext");
+  minFollowersText.innerHTML = val;
+}
+
+function updateSliderInputMax(val) {
+  const maxFollowersText = document.getElementById("maxfollowerstext");
+  maxFollowersText.innerHTML = val;
+}
+
+</script>
+
+<%- include('partials/footer') %>

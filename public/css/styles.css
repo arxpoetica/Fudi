@@ -1,0 +1,250 @@
+h1, h2, h3, p, ul, li, a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a:link{
+  color:black;
+}
+a:visited{
+  color:black;
+}
+
+/******************** Navbar ***********************/
+.topnav {
+  background-color: #f2f2f2;
+  height: 90px;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.topnav a {
+  display: block;
+  color: #7a7a7a;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.search-container {
+  display: inline-block;
+  margin-left: 8%;
+  margin-top: 25px;
+  line-height: 2rem;
+  border: none;
+  width: 32%;
+}
+
+.menusearchbar {
+  display: inline-block;
+  margin-right: 0;
+  width: 75%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border: none;
+  box-shadow: 3px 3px 10px  #888888;
+}
+
+.menusearchbar:focus {
+  outline-width: 0;
+}
+
+.menusearchbutton {
+  display:inline;
+  margin-left: -7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 1px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border: none;
+  background-color: #E66B26;
+  color: white;
+  box-shadow: 3px 3px 10px  #888888;
+
+}
+
+.menulink {
+  float: right;
+  line-height: 4rem;
+}
+
+.menulink:hover {
+  color: #E66B26;
+}
+
+.menulogo {
+  float: left;
+  height: 60px;
+  width: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .search-container {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+    line-height: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .topnav.responsive .menulink:not(.icon) {
+    background-color: lightgrey;
+  }
+
+  .topnav.responsive .topitem {
+    margin-top: 30px;
+  }
+
+  .topnav.responsive .icon {
+    margin-top: 23px;
+  }
+
+  .topnav.responsive .bottomitem {
+    margin-bottom: 100px;
+  }
+
+  .topnav.responsive .search-container {
+    float: right;
+    display: block;
+    text-align: right;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    margin-right: 15px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    margin-top: 35px;
+
+  }
+}
+
+/********************** Filter and Sort Buttons -- Main Feed **********************/
+
+.feedFilterPopup {
+  background-color: gray;
+  visibility: hidden;
+  width: 160px;
+  position: absolute;
+  z-index: 1;
+  padding: 30px;
+}
+
+.show {
+  visibility: visible;
+}
+
+.followersslider {
+
+}
+
+/********************** Main Feed Styling ************************/
+
+.maingrid {
+  margin: 20px 0;
+}
+
+.maingridrow {
+  margin: 10px 5%;
+  text-align: center;
+}
+
+.maingriditem {
+  height: 340px;
+  width: 300px;
+}
+
+.mainpicture {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.maingridtext {
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: block;
+  text-align: left;
+  padding-left: 25px;
+  font-weight: 600;
+}
+
+.maingridtextdesc {
+  font-size: 13px;
+  text-align: left;
+  padding-left: 25px;
+  overflow-wrap: normal;
+  padding-right: 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.numberoffollowers {
+  font-size: 12px;
+  display: inline-block;
+  position: relative;
+  left: 10px;
+  margin-bottom: 0;
+}
+
+.checked {
+  color: orange;
+  font-size: 13px;
+}
+
+.starscontainer {
+  margin-top: 0;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.personicon {
+  margin-right: 5px;
+}
+
+.noSearchResults {
+  text-align: center;
+}
+
+/******************* Sign up form ************************/
+
+.signupbutton {
+  width: 450px;
+  padding: 80px 0;
+  margin: 10% auto;
+  text-align: center;
+  background-color: lightgrey;
+  border-radius: 6px;
+}
+
+.instagramlogin {
+  background-color: purple;
+  box-shadow: 3px 3px;
+  padding:  10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.textdesclogin {
+  margin-bottom: 50px;
+}
